@@ -31,37 +31,91 @@
         <hr>
 
         <section id="main_content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+          <h1>
+<a name="nguploader" class="anchor" href="#nguploader"><span class="octicon octicon-link"></span></a>ngUploader</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>ngUploader is a file uploader based on angularjs and bootstrap</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<ul>
+<li>Upload multiple files</li>
+<li>Allows concurrent Upload</li>
+<li>Totally cutomizable</li>
+</ul><p>ngUploader is a multi file uploader you can use with JQuery or every library or framework:</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<blockquote>
+<p>The overriding design goal for Markdown's
+formatting syntax is to make it as readable 
+as possible. The idea is that a
+Markdown-formatted document should be
+publishable as-is, as plain text, without
+looking like it's been marked up with tags
+or formatting instructions.</p>
+</blockquote>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>This text your see here is <em>actually</em> written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.  </p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>
+<a name="version" class="anchor" href="#version"><span class="octicon octicon-link"></span></a>Version</h2>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>1.0</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h2>
+<a name="tech" class="anchor" href="#tech"><span class="octicon octicon-link"></span></a>Tech</h2>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Dillinger uses a number of open source projects to work properly:</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<ul>
+<li>
+<a href="http://ace.ajax.org">Ace Editor</a> - awesome web-based text editor</li>
+<li>
+<a href="https://github.com/coreyti/showdown">Showdown</a> - a port of Markdown to JavaScript</li>
+<li>
+<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> - great UI boilerplate for modern web apps</li>
+<li>
+<a href="http://nodejs.org">node.js</a> - evented I/O for the backend</li>
+<li>
+<a href="http://expressjs.com">Express</a> - fast node.js network app framework <a href="http://twitter.com/tjholowaychuk">@tjholowaychuk</a>
+</li>
+<li>
+<a href="https://github.com/madrobby/keymaster">keymaster.js</a> - awesome keyboard handler lib by <a href="http://twitter.com/thomasfuchs">@thomasfuchs</a>
+</li>
+<li>
+<a href="http://jquery.com">jQuery</a> - duh </li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<div class="highlight highlight-sh"><pre>git clone <span class="o">[</span>git-repo-url<span class="o">]</span> dillinger
+<span class="nb">cd </span>dillinger
+npm i -d
+mkdir -p public/files/<span class="o">{</span>md,html,pdf<span class="o">}</span>
+</pre></div>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h5>
+<a name="configure-plugins-instructions-in-following-readmemd-files" class="anchor" href="#configure-plugins-instructions-in-following-readmemd-files"><span class="octicon octicon-link"></span></a>Configure Plugins. Instructions in following README.md files</h5>
+
+<ul>
+<li>plugins/dropbox/README.md</li>
+<li>plugins/github/README.md</li>
+<li>plugins/googledrive/README.md</li>
+</ul><div class="highlight highlight-sh"><pre>node app
+</pre></div>
+
+<h2>
+<a name="for-nodejitsu-deployment" class="anchor" href="#for-nodejitsu-deployment"><span class="octicon octicon-link"></span></a>For Nodejitsu Deployment</h2>
+
+<div class="highlight highlight-sh"><pre>npm version <span class="o">[</span> <span class="p">|</span> major <span class="p">|</span> minor <span class="p">|</span> patch <span class="p">|</span> build<span class="o">]</span>
+jitsu deploy
+</pre></div>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">alert</span><span class="p">(</span><span class="s2">"adf"</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+
+<p><em>Free Software, Hell Yeah!</em></p>
         </section>
 
         <footer>
