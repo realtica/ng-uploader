@@ -69,21 +69,17 @@ and above all very easy to implement.</p>
 
 <p>Include <a href="http://angularjs.org/">angularjs</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap</a> dependencies.</p>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://getbootstrap.com/dist/css/bootstrap.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://getbootstrap.com/dist/js/bootstrap.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ng-uploader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Sample 1<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://getbootstrap.com/dist/css/bootstrap.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://getbootstrap.com/dist/js/bootstrap.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ng-uploader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>    
 </pre></div>
 
 <h2>
 <a name="step-2" class="anchor" href="#step-2"><span class="octicon octicon-link"></span></a>Step 2</h2>
 
-<p>Include ng-uploader attribute.</p>
+<p>Include ng-uploader gadget and a URL into ng-uploader attribute.</p>
 
 <div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">ng-app=</span><span class="s">"myapp"</span> <span class="na">ng-uploader=</span><span class="s">"http://mydomain.com"</span><span class="nt">&gt;&lt;/div&gt;</span>
 </pre></div>
@@ -96,9 +92,46 @@ and above all very easy to implement.</p>
 <div class="highlight highlight-javascript"><pre><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myapp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ui.ng-uploader'</span><span class="p">]);</span>
 </pre></div>
 
-<p>That's right!</p>
+<h2>
+<a name="the-result" class="anchor" href="#the-result"><span class="octicon octicon-link"></span></a>The result:</h2>
 
-<p>License</p>
+<p><img src="https://raw.githubusercontent.com/realtica/ng-uploader/master/logos/ng-uploader.png" alt="alt text" title="Gadget ng-uploader"></p>
+
+<h2>
+<a name="you-dont-like-default-template" class="anchor" href="#you-dont-like-default-template"><span class="octicon octicon-link"></span></a>You don't like default template?</h2>
+
+<p>Ok please just edit the template.html, remember this template is based in <a href="http://getbootstrap.com/">Twitter Bootstrap</a> if You want use another styles or remove bootstrap, just do it!  :)</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-info"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"{{file.parameter}}"</span> <span class="na">multiple</span><span class="nt">/&gt;&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;&lt;div</span> <span class="na">ng-repeat=</span><span class="s">"file in fileList"</span>  <span class="na">style=</span><span class="s">"text-align:center;"</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;&lt;span&gt;</span>{{file.filename}}<span class="nt">&lt;/span&gt;&lt;button</span> <span class="na">ng-click=</span><span class="s">"erase(this)"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;&lt;div</span> <span class="na">min-width=</span><span class="s">"10%"</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"{{file.value}}"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: {{file.value}}%;"</span><span class="nt">&gt;</span>{{file.size}}/{{file.total}}<span class="nt">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success"</span> <span class="na">ng-click=</span><span class="s">"startUpload()"</span><span class="nt">&gt;</span>Upload<span class="nt">&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;</span>
+</pre></div>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p><strong>Attributes:</strong></p>
+
+<ul>
+<li>concurrency: Default value "2"</li>
+<li>name: Default value "file"</li>
+</ul><p><strong>Example</strong></p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">ng-app=</span><span class="s">"myapp"</span> <span class="na">ng-uploader=</span><span class="s">"http://mydomain.com"</span> <span class="na">concurrency=</span><span class="s">"5"</span> <span class="na">name=</span><span class="s">"myfiletoupload"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+<h2>
+<a name="next-features-" class="anchor" href="#next-features-"><span class="octicon octicon-link"></span></a>Next Features </h2>
+
+<ul>
+<li>Resumable uploads</li>
+<li>Drag and Drop</li>
+<li>More templates...</li>
+</ul><h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p><a href="http://realtica.org">Remy Alain Ticona Carbajal</a></p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p><a href="https://www.gnu.org/copyleft/gpl.html">GNU Version 3</a></p>
 
