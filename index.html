@@ -3,128 +3,135 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>ngUploader by realtica</title>
+
+    <title>ng-uploader by realtica</title>
   </head>
 
   <body>
-    <div id="container">
+    <header>
       <div class="inner">
+        <h1>ng-uploader</h1>
+        <h2>ng-uploader is a single/multiple and high customizable file uploader</h2>
+        <a href="https://github.com/realtica/ng-uploader" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <header>
-          <h1>ngUploader</h1>
-          <h2>Angularjs+Bootstrap for upload files.</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/realtica/ng-uploader/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/realtica/ng-uploader/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/realtica/ng-uploader" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
           <h1>
-<a name="nguploader" class="anchor" href="#nguploader"><span class="octicon octicon-link"></span></a>ngUploader</h1>
+<a name="ng-uploader" class="anchor" href="#ng-uploader"><span class="octicon octicon-link"></span></a>ng-uploader</h1>
 
-<p>ngUploader is a file uploader based on angularjs and bootstrap</p>
+<p>ng-uploader is a single/multiple and high customizable file uploader and the most important is very easy to implement.</p>
 
 <ul>
-<li>Upload multiple files</li>
+<li>Upload multiple or single files</li>
+<li>Cancel or remove upload when you want.</li>
 <li>Allows concurrent Upload</li>
 <li>Totally cutomizable</li>
-</ul><p>ngUploader is a multi file uploader you can use with JQuery or every library or framework:</p>
+</ul><p>You can use with html5, jquery or every library or framework:</p>
 
 <blockquote>
-<p>The overriding design goal for Markdown's
-formatting syntax is to make it as readable 
-as possible. The idea is that a
-Markdown-formatted document should be
-publishable as-is, as plain text, without
-looking like it's been marked up with tags
-or formatting instructions.</p>
+<p>The main objective of ng-uploader is
+ to have a user control, clean, simple, customizable,
+and above all very easy to implement.</p>
 </blockquote>
-
-<p>This text your see here is <em>actually</em> written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.  </p>
 
 <h2>
 <a name="version" class="anchor" href="#version"><span class="octicon octicon-link"></span></a>Version</h2>
 
-<p>1.0</p>
+<p>1.0.0</p>
 
 <h2>
 <a name="tech" class="anchor" href="#tech"><span class="octicon octicon-link"></span></a>Tech</h2>
 
-<p>Dillinger uses a number of open source projects to work properly:</p>
+<p>ng-uploader uses a number of open source projects to work properly:</p>
 
 <ul>
 <li>
-<a href="http://ace.ajax.org">Ace Editor</a> - awesome web-based text editor</li>
+<a href="http://getbootstrap.com/">Twitter Bootstrap</a> - great UI boilerplate for modern web apps</li>
 <li>
-<a href="https://github.com/coreyti/showdown">Showdown</a> - a port of Markdown to JavaScript</li>
-<li>
-<a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> - great UI boilerplate for modern web apps</li>
-<li>
-<a href="http://nodejs.org">node.js</a> - evented I/O for the backend</li>
-<li>
-<a href="http://expressjs.com">Express</a> - fast node.js network app framework <a href="http://twitter.com/tjholowaychuk">@tjholowaychuk</a>
-</li>
-<li>
-<a href="https://github.com/madrobby/keymaster">keymaster.js</a> - awesome keyboard handler lib by <a href="http://twitter.com/thomasfuchs">@thomasfuchs</a>
-</li>
-<li>
-<a href="http://jquery.com">jQuery</a> - duh </li>
+<a href="http://angularjs.org/">angularjs</a> - awesome keyboard handler lib by [@thomasfuchs]</li>
 </ul><h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
 
-<div class="highlight highlight-sh"><pre>git clone <span class="o">[</span>git-repo-url<span class="o">]</span> dillinger
-<span class="nb">cd </span>dillinger
-npm i -d
-mkdir -p public/files/<span class="o">{</span>md,html,pdf<span class="o">}</span>
-</pre></div>
+<h2>
+<a name="step-1" class="anchor" href="#step-1"><span class="octicon octicon-link"></span></a>Step 1</h2>
 
-<h5>
-<a name="configure-plugins-instructions-in-following-readmemd-files" class="anchor" href="#configure-plugins-instructions-in-following-readmemd-files"><span class="octicon octicon-link"></span></a>Configure Plugins. Instructions in following README.md files</h5>
+<p>Include <a href="http://angularjs.org/">angularjs</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap</a> dependencies.</p>
 
-<ul>
-<li>plugins/dropbox/README.md</li>
-<li>plugins/github/README.md</li>
-<li>plugins/googledrive/README.md</li>
-</ul><div class="highlight highlight-sh"><pre>node app
+<div class="highlight highlight-html"><pre><span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://getbootstrap.com/dist/css/bootstrap.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://getbootstrap.com/dist/js/bootstrap.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ng-uploader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Sample 1<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
 </pre></div>
 
 <h2>
-<a name="for-nodejitsu-deployment" class="anchor" href="#for-nodejitsu-deployment"><span class="octicon octicon-link"></span></a>For Nodejitsu Deployment</h2>
+<a name="step-2" class="anchor" href="#step-2"><span class="octicon octicon-link"></span></a>Step 2</h2>
 
-<div class="highlight highlight-sh"><pre>npm version <span class="o">[</span> <span class="p">|</span> major <span class="p">|</span> minor <span class="p">|</span> patch <span class="p">|</span> build<span class="o">]</span>
-jitsu deploy
-</pre></div>
+<p>Include ng-uploader attribute.</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">alert</span><span class="p">(</span><span class="s2">"adf"</span><span class="p">);</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">ng-app=</span><span class="s">"myapp"</span> <span class="na">ng-uploader=</span><span class="s">"http://mydomain.com"</span><span class="nt">&gt;&lt;/div&gt;</span>
 </pre></div>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a name="step-3" class="anchor" href="#step-3"><span class="octicon octicon-link"></span></a>Step 3</h2>
 
-<p>MIT</p>
+<p>Load the module into javascript tag.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myapp'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ui.ng-uploader'</span><span class="p">]);</span>
+</pre></div>
+
+<p>That's right!</p>
+
+<p>License</p>
+
+<p><a href="https://www.gnu.org/copyleft/gpl.html">GNU Version 3</a></p>
 
 <p><em>Free Software, Hell Yeah!</em></p>
         </section>
 
-        <footer>
-          ngUploader is maintained by <a href="https://github.com/realtica">realtica</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+        <aside id="sidebar">
+          <a href="https://github.com/realtica/ng-uploader/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/realtica/ng-uploader/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-        
+          <p class="repo-owner"><a href="https://github.com/realtica/ng-uploader"></a> is maintained by <a href="https://github.com/realtica">realtica</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
       </div>
     </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-36851887-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
