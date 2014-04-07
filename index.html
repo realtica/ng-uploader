@@ -58,7 +58,7 @@ and above all very easy to implement.</p>
 
 <ul>
 <li>
-<a href="http://getbootstrap.com/">Twitter Bootstrap</a> - great UI boilerplate for modern web apps</li>
+<a href="http://getbootstrap.com/">Twitter Bootstrap</a> - great UI boilerplate for modern web apps(optional)</li>
 <li>
 <a href="http://angularjs.org/">angularjs</a> - awesome keyboard handler lib by [@thomasfuchs]</li>
 </ul><h2>
@@ -100,7 +100,7 @@ and above all very easy to implement.</p>
 <h2>
 <a name="you-dont-like-default-template" class="anchor" href="#you-dont-like-default-template"><span class="octicon octicon-link"></span></a>You don't like default template?</h2>
 
-<p>Ok please just edit the template.html, remember this template is based in <a href="http://getbootstrap.com/">Twitter Bootstrap</a> if You want use another styles or remove bootstrap, just do it!  :)</p>
+<p>Ok please just edit the template.html, remember this template is based in <a href="http://getbootstrap.com/">Twitter Bootstrap</a> if You want use your own styles or templates, just do it!  :)</p>
 
 <div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-info"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"{{file.parameter}}"</span> <span class="na">multiple</span><span class="nt">/&gt;&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;&lt;div</span> <span class="na">ng-repeat=</span><span class="s">"file in fileList"</span>  <span class="na">style=</span><span class="s">"text-align:center;"</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;&lt;span&gt;</span>{{file.filename}}<span class="nt">&lt;/span&gt;&lt;button</span> <span class="na">ng-click=</span><span class="s">"erase(this)"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;&lt;div</span> <span class="na">min-width=</span><span class="s">"10%"</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"{{file.value}}"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: {{file.value}}%;"</span><span class="nt">&gt;</span>{{file.size}}/{{file.total}}<span class="nt">&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success"</span> <span class="na">ng-click=</span><span class="s">"startUpload()"</span><span class="nt">&gt;</span>Upload<span class="nt">&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;</span>
 </pre></div>
