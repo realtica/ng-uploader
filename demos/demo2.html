@@ -7,10 +7,10 @@
     <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
     <script src="ng-uploader.js"></script>
     <meta charset="utf-8">
-    <title>Demo 1</title>
+    <title>Demo 2</title>
 </head>
 <body>
-<div ng-app="myapp" ng-uploader=""></div>
+<div ng-app="myapp" ng-uploader="" concurrency="1" name="myfile"></div>
 <script>
     angular.module('myapp', ['ui.ng-uploader']);
 </script>
