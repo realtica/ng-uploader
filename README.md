@@ -14,6 +14,9 @@ You can use with html5, jquery or every library or framework:
 >  to have a user control, clean, simple, customizable,
 > and above all very easy to implement.
 
+Try the [DEMO](http://goo.gl/zmvA0j)
+--------------
+
 Version
 -
 
@@ -24,8 +27,8 @@ Tech
 
 ng-uploader uses a number of open source projects to work properly:
 
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [angularjs] - awesome keyboard handler lib by [@thomasfuchs]
+* [Twitter Bootstrap] - great UI boilerplate for modern web apps(optional)
+* [angularjs] - HTML enhanced for web apps!
 
 How to use
 --------------
@@ -66,7 +69,7 @@ The result:
 You don't like default template?
 --------------------------------
 
-Ok please just edit the template.html, remember this template is based in [Twitter Bootstrap] if You want use another styles or remove bootstrap, just do it!  :)
+Ok please just edit the template.html, remember this template is based in [Twitter Bootstrap] if You want use your own styles or templates, just do it!  :)
 
 ```html
 <div class="panel panel-info"><div class="panel-heading"><input class="btn btn-default" type="file" name="{{file.parameter}}" multiple/></div><div class="panel-body"><div ng-repeat="file in fileList"  style="text-align:center;" class="bg-primary"><span>{{file.filename}}</span><button ng-click="erase(this)" type="button" class="close" aria-hidden="true">&times;</button><div class="progress"><div min-width="10%" class="progress-bar" role="progressbar" aria-valuenow="{{file.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{file.value}}%;">{{file.size}}/{{file.total}}</div></div></div><button class="btn btn-success" ng-click="startUpload()">Upload</button></div></div>
@@ -108,3 +111,4 @@ License
   [GNU Version 3]: https://www.gnu.org/copyleft/gpl.html
   
 
+  
